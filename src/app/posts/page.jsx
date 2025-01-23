@@ -1,7 +1,8 @@
+import Link from "next/link";
 import React from "react";
 
 const Posts = ({ posts }) => {
-  console.log(posts);
+//   console.log(posts);
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4">
       {
@@ -10,7 +11,7 @@ const Posts = ({ posts }) => {
               <h2 className="card-title">{post.title}</h2>
               <p>{post.body}</p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Details</button>
+                <Link href={`/post/${post.id}`} className="btn btn-primary">Details</Link>
               </div>
             </div>
           </div>)
