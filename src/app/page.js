@@ -1,4 +1,5 @@
-import { ClientPageRoot } from "next/dist/client/components/client-page";
+"use server";
+
 import Posts from "./posts/page";
 
 
