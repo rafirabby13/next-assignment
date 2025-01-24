@@ -18,13 +18,15 @@ const page = () => {
   }, []);
   return (
     <div>
-      <div className="card-body max-w-lg mx-auto">
-        <h2 className="card-title">{post.title}</h2>
-        <p>{post.body}</p>
-        <div className="card-actions justify-end">
-          <Link href='/' className="btn btn-primary">
-            Home
-          </Link>
+      <div  className=" bg-base-100 max-w-xl mx-auto shadow-xl">
+        <div className="p-3 space-y-4">
+          <h2 className="text-2xl font-bold">{post.title}</h2>
+          <p>{post.body}</p>
+          <div className="card-actions justify-end">
+            <Link href="/" className="btn btn-primary">
+              Home
+            </Link>
+          </div>
         </div>
       </div>
     </div>
