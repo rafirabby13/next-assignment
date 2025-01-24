@@ -22,13 +22,14 @@ const Navbar = async () => {
         <p className="">
           <Link href="/">Home</Link>
         </p>
+        <p>
+              <Link href="/profile">Profile</Link>
+            </p>
 
         {user ? (
           <>
             {" "}
-            <p>
-              <Link href="/profile">Profile</Link>
-            </p>
+            
             <LogoutLink className="btn btn-outline btn-sm text-[#FFF6DA]">Log out</LogoutLink>
           </>
         ) : (
