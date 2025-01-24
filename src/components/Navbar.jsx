@@ -2,7 +2,6 @@ import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
-  
   return (
     <div>
       <div className=" bg-base-100 flex gap-3  justify-center text-2xl font-semibold py-10">

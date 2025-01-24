@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 const page = () => {
   const { id } = useParams();
   const [post, setPost] = useState({});
+  console.log(post)
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
       .then((res) => res.json())

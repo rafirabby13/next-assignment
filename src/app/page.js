@@ -4,9 +4,9 @@ import Posts from "./posts/page";
 
 export default async function Home() {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-  // if(!response.ok){
-  //   throw new Error('no data')
-  // }
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
 
   const data = await res.json()
   // console.log(data)
