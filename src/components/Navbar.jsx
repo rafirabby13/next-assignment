@@ -17,8 +17,8 @@ const Navbar = async () => {
 
   console.log(user);
   return (
-    <div>
-      <div className=" bg-base-100 flex gap-3  justify-center text-2xl font-semibold py-10 items-center">
+    <div className="bg-[#09122C]">
+      <div className="  flex gap-3 md:gap-6  justify-center text-2xl font-semibold py-10 items-center text-[#FFF6DA]">
         <p className="">
           <Link href="/">Home</Link>
         </p>
@@ -29,19 +29,19 @@ const Navbar = async () => {
             <p>
               <Link href="/profile">Profile</Link>
             </p>
-            <LogoutLink className="btn btn-accent">Log out</LogoutLink>
+            <LogoutLink className="btn btn-outline btn-sm text-[#FFF6DA]">Log out</LogoutLink>
           </>
         ) : (
           <>
             <LoginLink
-              className="btn btn-accent"
+              className="btn btn-outline btn-sm text-[#FFF6DA]"
               postLoginRedirectURL="/profile"
             >
               Sign in
             </LoginLink>
             <RegisterLink
               postLoginRedirectURL="/profile"
-              className="btn btn-accent"
+              className="btn btn-outline btn-sm text-[#FFF6DA]"
             >
               Sign up
             </RegisterLink>

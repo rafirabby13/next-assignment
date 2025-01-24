@@ -13,7 +13,7 @@ export default async function Home() {
   // console.log(data)
 
   return (
-    <div>
+    <div className="bg-[#d0ddd01f]">
        <Posts posts={data}/>
     </div>
   );

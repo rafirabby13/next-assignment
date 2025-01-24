@@ -19,12 +19,12 @@ const page = () => {
   }, []);
   return (
     <div>
-      <div  className=" bg-base-100 max-w-xl mx-auto shadow-xl">
-        <div className="p-3 space-y-4">
-          <h2 className="text-2xl font-bold">{post.title}</h2>
-          <p>{post.body}</p>
-          <div className="card-actions justify-end">
-            <Link href="/" className="btn btn-primary">
+      <div  className=" bg-[#E1EACD] text-[#09122C] max-w-3xl mx-auto shadow-xl my-20 ">
+        <div className="space-y-4 p-10">
+          <h2 className="text-4xl font-bold">{post.title}</h2>
+          <p className="text-xl">{post.body}</p>
+          <div className=" ">
+            <Link href="/" className="btn btn-outline text-2xl px-20 text-[#09122C]">
               Home
             </Link>
           </div>
