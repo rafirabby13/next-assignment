@@ -9,7 +9,10 @@ import {
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
 const Navbar = async () => {
-  const { getUser } = getKindeServerSession();
+  const { getUser, isLoading } = getKindeServerSession();
+  if (isLoading) {
+    return "laoding......";
+  }
   const user = await getUser();
 
   console.log(user);
@@ -19,11 +22,15 @@ const Navbar = async () => {
         <p className="">
           <Link href="/">Home</Link>
         </p>
-        <p>
-          <Link href="/profile">Profile</Link>
-        </p>
+
         {user ? (
-          <LogoutLink className="btn btn-accent">Log out</LogoutLink>
+          <>
+            {" "}
+            <p>
+              <Link href="/profile">Profile</Link>
+            </p>
+            <LogoutLink className="btn btn-accent">Log out</LogoutLink>
+          </>
         ) : (
           <>
             <LoginLink
